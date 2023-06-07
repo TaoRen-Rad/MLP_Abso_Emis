@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+    <div class="button-group">
+        <select id="model-selector">
+            <option value="https://raw.githubusercontent.com/DWJCW/model_parameter/master/alberti/model.json">Alberti-cut-off</option>
+            <option value="https://raw.githubusercontent.com/DWJCW/model_parameter/master/psl/model.json">Pseudo-Lorentz</option>
+        </select>
+        <select id="mode-selector">
+            <option value="emis">Emissivity Chart</option>
+            <option value="abso">Absorptivity Chart</option>
+        </select>
+        <button id="load-button" onclick="loadModel()">Load Plotter</button>
+    </div>
+
+
+    <div id="model-interactions">
+        <div class="button-group">
+            <button onclick="addRow()">Add</button>
+            <button onclick="removeRow()">Remove</button>
+            <button onclick="plot()">Plot</button>
+        </div>
+
+        <div class="table-container">
+            <table id="data-table">
+                <thead id="table-head">
+                    <tr>
+                        <th>\(p_t\) bar</th>
+                        <th>\(T_s\) K</th>
+                        <th>\(T_g\) K</th>
+                        <th>\(L\) cm</th>
+                        <th>\(x_{\text{H}_2 \text{O}}\)</th>
+                        <th>\(x_{\text{CO}_2}\)</th>
+                        <th>\(x_{\text{CO}}\)</th>
+                        <th>\(\alpha\)</th>
+                    </tr>
+                </thead>                
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <div id="plot"></div>
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.13.0/dist/tf.min.js"></script>
+    <script src="predict.js"></script>
+    <script src="plot.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <h1>
+        What is emissivity and absorptivity?
+    </h1>
+    <h2>About emissivity</h2>
+    <p>
+        A gray gas's total emissivity is defined as the ratio between the total emitted radiation over a path \(L\) (ignoring the self-absorption) and the maximum possible emission, aka. the black body emission, as shown below,
+    </p>
+    <p>
+        $$
+        \epsilon_t=\frac{\int_0^\infty I_{b\eta}(T_g)\epsilon_\eta\mathrm{d}\eta}{\int_0^\infty I_{b\eta}(T_g)\mathrm{d}\eta}=\frac{\int_0^\infty I_{b\eta}(T_g)(1-\mathrm{e}^{-\kappa_\eta L})\mathrm{d}\eta}{\int_0^\infty I_{b\eta}(T_g)\mathrm{d}\eta}=\frac{\pi\int_0^\infty I_{b\eta}(T_g)(1-\mathrm{e}^{-\kappa_\eta L})\mathrm{d}\eta}{\sigma T_g^4},
+        $$
+    </p>
+    <p>
+        where \(T_g\) is the temperature of the gas, \(I_{b\eta}\) is the black body emission intensity, \(\kappa_\eta\) is the spectral absorption coefficient, \(\eta\) is the wavenumber, and \(\sigma=5.67\times 10^{-8}\ \mathrm{W/m^2/K^4}\) is the Stefan-Boltzmann constant.
+    </p>
+    <h2>About absorptivity</h2>
+    <p>
+        A gray gas's total absorptivity is defined as the ratio between the total absorbed radiation over a path \(L\) and the emission from a black body surface, as shown below,
+    </p>
+    <p>
+        $$
+        \alpha_t=\frac{\int_0^\infty I_{b\eta}(T_s)\epsilon_\eta\mathrm{d}\eta}{\int_0^\infty I_{b\eta}(T_s)\mathrm{d}\eta}=\frac{\int_0^\infty I_{b\eta}(T_s)(1-\mathrm{e}^{-\kappa_\eta L})\mathrm{d}\eta}{\int_0^\infty I_{b\eta}(T_s)\mathrm{d}\eta}=\frac{\pi\int_0^\infty I_{b\eta}(T_s)(1-\mathrm{e}^{-\kappa_\eta L})\mathrm{d}\eta}{\sigma T_s^4},
+        $$
+    </p>
+    <p>
+        where \(T_s\) is the temperature of the surface. \(\kappa_\eta\) in both equations can be obtained by the summation of the mixture's species' linear absorption coefficient \(\kappa_{\eta i}\).
+    </p>
+
+    <h1>What can this calculator do?</h1>
+    <ul>
+        <li>Compute an absorptivity or emissivity based on one single thermodynamic state by inputting them on the webpage.</li>
+        <li>Compute a series of absorptivities or emissivities based on different thermodynamic states by uploading a file.</li>
+        <li>Plot an emissivity or absorptivity chart</li>
+    </ul>
+</body>
+</html>

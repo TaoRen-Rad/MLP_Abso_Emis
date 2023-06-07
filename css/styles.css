@@ -1,0 +1,130 @@
+html {
+    font-size: 16px; /* Set the root font size */
+  }
+
+.logo {
+height: 2.0em; /* Set the height using em */
+}
+  
+  
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Base font size for the body */
+}
+
+/* Adjust font sizes for different elements */
+h1 {
+    font-size: 2.0em; /* Double the base font size */
+}
+
+h2 {
+    font-size: 1.25em; /* 1.5 times the base font size */
+}
+
+p {
+    font-size: 1.0em; /* 0.875 times the base font size */
+}
+
+li {
+    font-size: 1.0em; /* 0.875 times the base font size */
+}
+
+select {
+    font-size: 1em; /* Relative font size based on the body font size */
+}
+
+/* Styles for button element */
+button {
+    font-size: 1em; /* Relative font size based on the body font size */
+}
+
+a {
+    font-size: 1em; /* Relative font size based on the body font size */
+}
+
+b {
+    font-size: 1em; /* Relative font size based on the body font size */
+}
+
+* {
+    font-size: 1em; /* Relative font size based on the body font size */
+}
+
+.content-frame {
+    width: 100%;
+    height: calc(100vh - 250px);
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #951d12;
+}
+
+nav {
+    width: 100%;
+    max-width: 300px;
+}
+
+main {
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+/* Change here */
+.table-container {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%; /* or set a fixed width like 700px */
+    table-layout: auto; /* important */
+    margin: 0 auto; /* centers the table */
+    font-size: 16px; /* Base font size for the body */
+}
+
+th, td {
+    overflow: hidden; /* prevents the content from overflowing */
+    text-overflow: ellipsis;
+    font-size: 1.0em; /* Double the base font size */
+}
+
+#model-interactions {
+    display: none;
+}
+
+#data-table {
+    width: 100%;
+    table-layout: auto;
+    margin: 0 auto;
+}
+
+/* 设置表头单元格的样式 */
+#data-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+    max-width: 50pt;
+}
+
+/* 设置数据单元格的样式 */
+#data-table td {
+    text-align: center;
+    max-width: 50pt;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#data-table input[type="number"] {
+    width: 90%; /* you can adjust this based on your preference */
+    border: none; /* remove default border */
+    box-sizing: border-box; /* include padding and border in the element's total width and height */
+}
