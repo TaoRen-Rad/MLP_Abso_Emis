@@ -14,10 +14,19 @@ function addRow() {
     var table = document.getElementById('data-table');
     var row = table.insertRow(-1);
 
-    // Define default values for each cell
-    var defaultValues = [1.0, 300.0, 300.0, 0.1, 0.0, 0.0, 0.0];
+    // get the number of rows in the table
+    var num_rows = table.rows.length;
 
-    for (var i = 0; i < 7; i++) {
+    // check if it's the first row or not
+    var firstRow = num_rows <= 2; // including the header row
+
+    var defaultValues;
+
+
+    // Define default values for each cell
+    defaultValues = firstRow ? [1.0, 300.0, 300.0, 0.1, 0.0, 0.0, 0.0] : getDefaultValues(table, 7);
+
+    for (var i = 0; i < defaultValues.length; i++) {
         var cell = row.insertCell(i);
 
         // Set the default value in the input field
@@ -26,6 +35,17 @@ function addRow() {
     }
 }
 
+function getDefaultValues(table, numCells) {
+    var lastRow = table.rows[table.rows.length - 2];
+    var defaultValues = [];
+
+    for (var i = 0; i < numCells; i++) {
+        var inputValue = lastRow.cells[i].querySelector('input').value;
+        defaultValues.push(parseFloat(inputValue));
+    }
+
+    return defaultValues;
+}
 
 function removeRow() {
     var table = document.getElementById('data-table');
