@@ -19,3 +19,21 @@ Two spectral lineshapes, namely Alberti-cut-off lineshape and the Pseudo-Lorentz
 **The webpage required Internet access to load necessary external script and model parameter files.** The model parameter files are large and may take a while to load (less than one minute, usually within a couple of seconds). Please be patient. These files are hosted on GitHub. If they cannot be loaded properly, please check your network status.
 
 ## Citation
+
+If you use our model in your research, please cite our work using the following Bibtex entry:
+
+```bibtex
+
+@article{chen_machine_2024,
+	title = {A machine learning based model for gray gas emissivity and absorptivity of {H2O}-{CO2}-{CO}-{N2} mixtures},
+	volume = {312},
+	issn = {0022-4073},
+	doi = {10.1016/j.jqsrt.2023.108798},
+	journal = {Journal of Quantitative Spectroscopy and Radiative Transfer},
+	author = {Chen, Wei and Ren, Tao and Zhao, Changying},
+	month = jan,
+	year = {2024},
+	keywords = {Absorptivity, Emissivity, HITEMP, Hottel’s charts, Machine learning},
+	pages = {108798},
+}
+```
