@@ -1,4 +1,4 @@
-# A machine learning-based unified gray gas emissivity andabsorptivity model for H<sub>2</sub>O-CO<sub>2</sub>-CO-N<sub>2</sub> mixtures
+# A machine learning-based unified gray gas emissivity and absorptivity model for H<sub>2</sub>O-CO<sub>2</sub>-CO-N<sub>2</sub> mixtures
 
 ## Introduction
 
